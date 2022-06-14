@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos de js</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  <h1>Fundamentos de javascript</h1>
+
+  <h3>Variables let vs var</h3>
+  <h3>Constantes</h3>
+  <script>
+    // Antes ne js no habia ambitos de bloque
+    // por eso se implemento la declaracion de las variables con let, esta declaracion si respeta el ambito de bloque, se considera malas practicas utilizar las declaraciones de variables con la palabra reservada var
+
+    // mala practiva
+    var hola = "hola mundo"
+    console.log(hola)
+    // buenas practicas
+    let hello = "hola mundo"
+    console.log(hello)
+    // el objeto windows es el que mapea todos los alcances de las variables que has declarado y con var se guardaran en el objeto windows
+
+    //ambito de bloque
+    console.log(" ************var***********")
+    var musica = "rock";
+    console.log("Variable musica antes del bloque", musica);
+    {
+      var musica = "pop";
+      console.log("Variable musica dentro del bloque", musica);
+    }
+    console.log("Variable musica despues del bloque", musica);
+    console.log(" ************let***********")
+    let musicalet = "rock";
+    console.log("Variable musica antes del bloque", musicalet);
+    {
+      let musicalet = "pop";
+      console.log("Variable musica dentro del bloque", musicalet);
+    }
+    console.log("Variable musica despues del bloque", musicalet);
+
+    // ********************************Constantes**************************
+    console.log(" ************const***********")
+    let a;
+    const PI = 3.1416;
+    // const NUEVE;
+    console.log(PI)
+    a = "kenai";
+    console.log(a);
+    /*
+    Primitivos: se accede directamente al valor
+    string
+    number
+    boolean
+    null
+    undefined
+    NaN
+    Compuestos: Se accede a la referencia del valor
+    Object={}
+    Array=[]
+    function=()
+    class{}
+    etc
+    */
+    let objeto = {
+      nombre: "David",
+      edad: "24"
+    }
+
+    let colores = ["Blanco", "Negro", "Azule"];
+    console.log(objeto);
+    console.log(colores);
+    objeto.correo = "Davalbra.gmal.com"
+    colores.push("Anaranjado")
+    console.log(objeto);
+    console.log(colores);
+    // ******************Que sucede declarada esta seccion con constantes*************
+    console.log("****************Ahora declaradas con const***********");
+    const objeto2 = {
+      nombre: "David",
+      edad: "24"
+    }
+
+    const colores2 = ["Blanco", "Negro", "Azule"];
+    console.log(objeto2);
+    console.log(colores2);
+    objeto2.correo = "Davalbra.gmal.com"
+    colores2.push("Anaranjado")
+    console.log(objeto2);
+    console.log(colores2);
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
