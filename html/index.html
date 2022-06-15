@@ -11,9 +11,59 @@
 
 <body>
   <h1>Fundamentos de javascript</h1>
+  <ol>
+    <li>Variables let vs var</li>
+    <li>Constantes</li>
+    <li>String</li>
+    <li>Template String</li>
+    <li>Numeros</li>
+    <li>Booleanos</li>
+    <li>Undefined, null y NaN</li>
+    <li>Funciones</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
 
-  <h3>Variables let vs var</h3>
-  <h3>Constantes</h3>
   <script>
     // Antes ne js no habia ambitos de bloque
     // por eso se implemento la declaracion de las variables con let, esta declaracion si respeta el ambito de bloque, se considera malas practicas utilizar las declaraciones de variables con la palabra reservada var
@@ -106,6 +156,117 @@
       lorem.trim(),
       lorem.split(" "),
     );
+    console.log("************Template String*********");
+    let nombrets = "David";
+    let apellidots = "Bravo";
+    // concatenacion
+    let saludots = "hola soy estudiante " + nombrets + ". " + apellidots + ".";
+    console.log(saludots);
+    // templateString
+    let saludo2ts = `Hola mi nombre es ${nombrets} ${apellidots}.`;
+    console.log(saludo2ts);
+    // con este tipo de comillas se puede trabajar mejor los textos que incluyen saltos de linea etc
+    let ul = `  <ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otonio</li>
+    <li>Invierno</li>
+  </ul>`
+    console.log(ul);
+    console.log("********************numeros******************");
+    let anu = 2;
+    let bnu = new Number(1);
+    let cnu = 7.19;
+    let dnu = "5.6";
+    console.log(anu, bnu);
+    console.log(cnu.toFixed(1));
+    console.log(cnu.toFixed(5));
+    console.log(parseInt(cnu));
+    console.log(parseFloat(cnu));
+    console.log(typeof cnu, typeof dnu);
+    console.log(anu + bnu);
+    console.log(cnu + parseInt(dnu));
+    console.log(cnu + parseFloat(dnu));
+    console.log(cnu + Number.parseInt(dnu));
+    console.log(cnu + Number.parseFloat(dnu));
+    console.log("********Tipo de datos booleanos******");
+    let verdaderotdb = true;
+    let falsoydb = false;
+    let vtdb = true;
+    let fydb = false;
+    console.log(verdaderotdb, falsoydb, vtdb, fydb);
+    console.log(typeof verdaderotdb, typeof falsoydb);
+    /*
+    truthy
+    true
+    {}
+    []
+    42
+    "foo"
+    new Date()
+    -42
+    3.14
+    -3.14
+    infinity
+    -infinity
+
+    Falsy
+    false
+    null
+    undefined
+    0 NaN
+    ' '
+    " "
+    document.all[1]
+    */
+
+
+    console.log("*************Undefined, null, NaN");
+    // no esta definida la variable
+    let indefinida;
+    console.log(indefinida);
+    //El programador le ha puesto el valor null intencionalmente
+    let nullo = null;
+    console.log(nullo);
+    // Nan no es un nnumero
+    let noEsUnNumero = "hola" * 3.7;
+    console.log(noEsUnNumero);
+    console.log("************Funciones***********");
+    //funcioens declaradas
+    function estoEsUnaFuncion() {
+      console.log("uno");
+      console.log("dos");
+      console.log("tres");
+      return "Hola como andas bb"
+    }
+    let valorDeFuncion = estoEsUnaFuncion();
+    console.log(valorDeFuncion);
+    function saludar(nombref = "desconocido", edad = 0) {
+      console.log(`Hola mi nombre es ${nombref} y tengo ${edad} anios`);
+    }
+    saludar("perro", 5);
+    saludar();
+    //funcioens reservadas
+
+    //Funciones declaradas vs funciones expresadas
+
+    funcionesDeclarada();
+    function funcionesDeclarada() {
+      console.log("texto");
+    }
+    funcionesDeclarada();
+    //funciones anonimnas
+
+    const funcionExpresada = function () {
+      console.log("esto es una funcion expresada, es decir una funcinoe que se le ha asignado como valor a una variable. si invocamos esta funcion antes de su definicion js nos dira...");
+    }
+
+    funcionExpresada();
+
+
+
+
+
 
 
 
